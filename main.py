@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# -*- coding: utf-8 -*-
 
 from hdwallet import BIP44HDWallet
 from hdwallet.cryptocurrencies import EthereumMainnet
@@ -32,6 +33,7 @@ for address_index in range(20):
     # Drive Ethereum BIP44HDWallet
     bip44_hdwallet.from_path(path=bip44_derivation)
     # Print address_index, path, address and private_key
-    print(f"({address_index}) {bip44_hdwallet.path()} {bip44_hdwallet.address()} 0x{bip44_hdwallet.private_key()}")
+    # {bip44_hdwallet.path()} 
+    print(f"({address_index}) {bip44_hdwallet.address()} 0x{bip44_hdwallet.private_key()}")
     # Clean derivation indexes/paths
     bip44_hdwallet.clean_derivation()
